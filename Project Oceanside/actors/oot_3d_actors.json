@@ -1,0 +1,1295 @@
+{
+  "0000": {
+    "instanceSize": "0x2A50"
+  },
+  "0002": {
+    "instanceSize": "0x1DD0"
+  },
+  "0004": {
+    "instanceSize": "0x200"
+  },
+  "0007": {
+    "instanceSize": "0x220"
+  },
+  "0008": {
+    "instanceSize": "0x1D0"
+  },
+  "0009": {
+    "instanceSize": "0x3F0"
+  },
+  "000A": {
+    "instanceSize": "0x3A0"
+  },
+  "000B": {
+    "instanceSize": "0x4A80"
+  },
+  "000C": {
+    "instanceSize": "0x210"
+  },
+  "000D": {
+    "instanceSize": "0xA70"
+  },
+  "000E": {
+    "instanceSize": "0x920"
+  },
+  "000F": {
+    "instanceSize": "0x2D0"
+  },
+  "0010": {
+    "instanceSize": "0x2A0"
+  },
+  "0011": {
+    "instanceSize": "0x850"
+  },
+  "0012": {
+    "instanceSize": "0xE00"
+  },
+  "0013": {
+    "instanceSize": "0x7C0"
+  },
+  "0014": {
+    "instanceSize": "0x10A0"
+  },
+  "0015": {
+    "instanceSize": "0x220"
+  },
+  "0016": {
+    "instanceSize": "0x320"
+  },
+  "0018": {
+    "instanceSize": "0x9D0"
+  },
+  "0019": {
+    "instanceSize": "0xBA0"
+  },
+  "001B": {
+    "instanceSize": "0x700"
+  },
+  "001C": {
+    "instanceSize": "0x520"
+  },
+  "001D": {
+    "instanceSize": "0x7E0"
+  },
+  "001E": {
+    "instanceSize": "0x3F0"
+  },
+  "0020": {
+    "instanceSize": "0x660"
+  },
+  "0021": {
+    "instanceSize": "0x5F0"
+  },
+  "0023": {
+    "instanceSize": "0x1C0"
+  },
+  "0024": {
+    "instanceSize": "0x1B0"
+  },
+  "0025": {
+    "instanceSize": "0xBF0"
+  },
+  "0026": {
+    "instanceSize": "0x320"
+  },
+  "0027": {
+    "instanceSize": "0x2070"
+  },
+  "0028": {
+    "instanceSize": "0x1060"
+  },
+  "0029": {
+    "instanceSize": "0x490"
+  },
+  "002A": {
+    "instanceSize": "0x880"
+  },
+  "002B": {
+    "instanceSize": "0x820"
+  },
+  "002D": {
+    "instanceSize": "0x2E0"
+  },
+  "002E": {
+    "instanceSize": "0x220"
+  },
+  "002F": {
+    "instanceSize": "0x520"
+  },
+  "0030": {
+    "instanceSize": "0x700"
+  },
+  "0032": {
+    "instanceSize": "0x280"
+  },
+  "0033": {
+    "instanceSize": "0x2AB0"
+  },
+  "0034": {
+    "instanceSize": "0x6D0"
+  },
+  "0035": {
+    "instanceSize": "0x5E0"
+  },
+  "0037": {
+    "instanceSize": "0x990"
+  },
+  "0038": {
+    "instanceSize": "0x570"
+  },
+  "0039": {
+    "instanceSize": "0x230"
+  },
+  "003A": {
+    "instanceSize": "0x850"
+  },
+  "003B": {
+    "instanceSize": "0x1C0"
+  },
+  "003C": {
+    "instanceSize": "0x1320"
+  },
+  "003D": {
+    "instanceSize": "0x590"
+  },
+  "003E": {
+    "instanceSize": "0x1D0"
+  },
+  "003F": {
+    "instanceSize": "0x2D0"
+  },
+  "0040": {
+    "instanceSize": "0x360"
+  },
+  "0041": {
+    "instanceSize": "0x2A0"
+  },
+  "0042": {
+    "instanceSize": "0x320"
+  },
+  "0043": {
+    "instanceSize": "0x240"
+  },
+  "0044": {
+    "instanceSize": "0x3F0"
+  },
+  "0045": {
+    "instanceSize": "0x420"
+  },
+  "0046": {
+    "instanceSize": "0x2A0"
+  },
+  "0047": {
+    "instanceSize": "0x1D0"
+  },
+  "0048": {
+    "instanceSize": "0xCA0"
+  },
+  "0049": {
+    "instanceSize": "0x210"
+  },
+  "004A": {
+    "instanceSize": "0x200"
+  },
+  "004B": {
+    "instanceSize": "0xBB0"
+  },
+  "004C": {
+    "instanceSize": "0x290"
+  },
+  "004D": {
+    "instanceSize": "0x640"
+  },
+  "004E": {
+    "instanceSize": "0x1D0"
+  },
+  "004F": {
+    "instanceSize": "0x1F0"
+  },
+  "0050": {
+    "instanceSize": "0x1D0"
+  },
+  "0051": {
+    "instanceSize": "0x2A0"
+  },
+  "0052": {
+    "instanceSize": "0x4F0"
+  },
+  "0054": {
+    "instanceSize": "0x5B0"
+  },
+  "0055": {
+    "instanceSize": "0x610"
+  },
+  "0056": {
+    "instanceSize": "0x200"
+  },
+  "0057": {
+    "instanceSize": "0x260"
+  },
+  "0058": {
+    "instanceSize": "0x1D0"
+  },
+  "0059": {
+    "instanceSize": "0x250"
+  },
+  "005A": {
+    "instanceSize": "0x960"
+  },
+  "005B": {
+    "instanceSize": "0x320"
+  },
+  "005C": {
+    "instanceSize": "0x230"
+  },
+  "005D": {
+    "instanceSize": "0x4D0"
+  },
+  "005E": {
+    "instanceSize": "0x290"
+  },
+  "005F": {
+    "instanceSize": "0x1D0"
+  },
+  "0060": {
+    "instanceSize": "0x6A0"
+  },
+  "0061": {
+    "instanceSize": "0x1C0"
+  },
+  "0062": {
+    "instanceSize": "0x220"
+  },
+  "0063": {
+    "instanceSize": "0x8D0"
+  },
+  "0064": {
+    "instanceSize": "0x1F0"
+  },
+  "0065": {
+    "instanceSize": "0x1C0"
+  },
+  "0066": {
+    "instanceSize": "0x2A0"
+  },
+  "0067": {
+    "instanceSize": "0xD30"
+  },
+  "0068": {
+    "instanceSize": "0x260"
+  },
+  "0069": {
+    "instanceSize": "0x610"
+  },
+  "006A": {
+    "instanceSize": "0x1D0"
+  },
+  "006B": {
+    "instanceSize": "0x210"
+  },
+  "006C": {
+    "instanceSize": "0x210"
+  },
+  "006D": {
+    "instanceSize": "0x290"
+  },
+  "006E": {
+    "instanceSize": "0x1D0"
+  },
+  "006F": {
+    "instanceSize": "0x1D0"
+  },
+  "0070": {
+    "instanceSize": "0x1C0"
+  },
+  "0071": {
+    "instanceSize": "0x2B0"
+  },
+  "0072": {
+    "instanceSize": "0x1F0"
+  },
+  "0077": {
+    "instanceSize": "0x220"
+  },
+  "007C": {
+    "instanceSize": "0x1C0"
+  },
+  "007D": {
+    "instanceSize": "0x1D0"
+  },
+  "0080": {
+    "instanceSize": "0x260"
+  },
+  "0081": {
+    "instanceSize": "0x1B0"
+  },
+  "0082": {
+    "instanceSize": "0x1B0"
+  },
+  "0084": {
+    "instanceSize": "0xC50"
+  },
+  "0085": {
+    "instanceSize": "0x1200"
+  },
+  "0086": {
+    "instanceSize": "0x1D0"
+  },
+  "0087": {
+    "instanceSize": "0x1E0"
+  },
+  "0088": {
+    "instanceSize": "0x1F0"
+  },
+  "0089": {
+    "instanceSize": "0x1E0"
+  },
+  "008A": {
+    "instanceSize": "0x6F0"
+  },
+  "008B": {
+    "instanceSize": "0x300"
+  },
+  "008C": {
+    "instanceSize": "0x1B80"
+  },
+  "008D": {
+    "instanceSize": "0x210"
+  },
+  "008E": {
+    "instanceSize": "0x840"
+  },
+  "008F": {
+    "instanceSize": "0x900"
+  },
+  "0090": {
+    "instanceSize": "0x9D0"
+  },
+  "0091": {
+    "instanceSize": "0xB00"
+  },
+  "0092": {
+    "instanceSize": "0x1E0"
+  },
+  "0093": {
+    "instanceSize": "0x2C0"
+  },
+  "0094": {
+    "instanceSize": "0x210"
+  },
+  "0095": {
+    "instanceSize": "0x830"
+  },
+  "0096": {
+    "instanceSize": "0x49E0"
+  },
+  "0097": {
+    "instanceSize": "0x18C0"
+  },
+  "0098": {
+    "instanceSize": "0x580"
+  },
+  "0099": {
+    "instanceSize": "0x28F0"
+  },
+  "009A": {
+    "instanceSize": "0xEB0"
+  },
+  "009B": {
+    "instanceSize": "0x210"
+  },
+  "009C": {
+    "instanceSize": "0x1E0"
+  },
+  "009D": {
+    "instanceSize": "0x1D0"
+  },
+  "009E": {
+    "instanceSize": "0x2F0"
+  },
+  "009F": {
+    "instanceSize": "0x220"
+  },
+  "00A1": {
+    "instanceSize": "0xD10"
+  },
+  "00A2": {
+    "instanceSize": "0xB80"
+  },
+  "00A3": {
+    "instanceSize": "0x220"
+  },
+  "00A4": {
+    "instanceSize": "0x940"
+  },
+  "00A5": {
+    "instanceSize": "0x550"
+  },
+  "00A6": {
+    "instanceSize": "0xD70"
+  },
+  "00A7": {
+    "instanceSize": "0x1D0"
+  },
+  "00A8": {
+    "instanceSize": "0x420"
+  },
+  "00A9": {
+    "instanceSize": "0xC60"
+  },
+  "00AA": {
+    "instanceSize": "0x590"
+  },
+  "00AB": {
+    "instanceSize": "0xB40"
+  },
+  "00AC": {
+    "instanceSize": "0x1E0"
+  },
+  "00AD": {
+    "instanceSize": "0x230"
+  },
+  "00AE": {
+    "instanceSize": "0x1D0"
+  },
+  "00AF": {
+    "instanceSize": "0x1E0"
+  },
+  "00B0": {
+    "instanceSize": "0x1E0"
+  },
+  "00B1": {
+    "instanceSize": "0x3A0"
+  },
+  "00B3": {
+    "instanceSize": "0xA40"
+  },
+  "00B4": {
+    "instanceSize": "0x780"
+  },
+  "00B5": {
+    "instanceSize": "0x250"
+  },
+  "00B6": {
+    "instanceSize": "0x570"
+  },
+  "00B7": {
+    "instanceSize": "0x360"
+  },
+  "00B8": {
+    "instanceSize": "0x1E0"
+  },
+  "00B9": {
+    "instanceSize": "0x1D0"
+  },
+  "00BA": {
+    "instanceSize": "0x12B0"
+  },
+  "00BB": {
+    "instanceSize": "0x280"
+  },
+  "00BC": {
+    "instanceSize": "0x320"
+  },
+  "00BD": {
+    "instanceSize": "0x1D0"
+  },
+  "00BE": {
+    "instanceSize": "0x220"
+  },
+  "00BF": {
+    "instanceSize": "0x1B0"
+  },
+  "00C0": {
+    "instanceSize": "0x230"
+  },
+  "00C1": {
+    "instanceSize": "0x5A0"
+  },
+  "00C2": {
+    "instanceSize": "0x1B0"
+  },
+  "00C3": {
+    "instanceSize": "0xDB0"
+  },
+  "00C4": {
+    "instanceSize": "0x3000"
+  },
+  "00C5": {
+    "instanceSize": "0x2B0"
+  },
+  "00C6": {
+    "instanceSize": "0xB80"
+  },
+  "00C7": {
+    "instanceSize": "0x430"
+  },
+  "00C8": {
+    "instanceSize": "0x240"
+  },
+  "00C9": {
+    "instanceSize": "0x420"
+  },
+  "00CA": {
+    "instanceSize": "0x410"
+  },
+  "00CB": {
+    "instanceSize": "0xE40"
+  },
+  "00CC": {
+    "instanceSize": "0xEA0"
+  },
+  "00CD": {
+    "instanceSize": "0x290"
+  },
+  "00CF": {
+    "instanceSize": "0x240"
+  },
+  "00D0": {
+    "instanceSize": "0x310"
+  },
+  "00D1": {
+    "instanceSize": "0x200"
+  },
+  "00D2": {
+    "instanceSize": "0xE70"
+  },
+  "00D3": {
+    "instanceSize": "0x3D0"
+  },
+  "00D4": {
+    "instanceSize": "0x1C0"
+  },
+  "00D5": {
+    "instanceSize": "0x250"
+  },
+  "00D6": {
+    "instanceSize": "0x1D0"
+  },
+  "00D7": {
+    "instanceSize": "0x1C0"
+  },
+  "00D9": {
+    "instanceSize": "0x500"
+  },
+  "00DA": {
+    "instanceSize": "0x260"
+  },
+  "00DB": {
+    "instanceSize": "0x200"
+  },
+  "00DC": {
+    "instanceSize": "0x8A0"
+  },
+  "00DD": {
+    "instanceSize": "0x2850"
+  },
+  "00DE": {
+    "instanceSize": "0xC50"
+  },
+  "00DF": {
+    "instanceSize": "0x790"
+  },
+  "00E0": {
+    "instanceSize": "0x710"
+  },
+  "00E1": {
+    "instanceSize": "0x260"
+  },
+  "00E2": {
+    "instanceSize": "0x240"
+  },
+  "00E3": {
+    "instanceSize": "0x1D0"
+  },
+  "00E4": {
+    "instanceSize": "0x1C0"
+  },
+  "00E5": {
+    "instanceSize": "0x1C0"
+  },
+  "00E6": {
+    "instanceSize": "0x250"
+  },
+  "00E7": {
+    "instanceSize": "0xC40"
+  },
+  "00E8": {
+    "instanceSize": "0x1250"
+  },
+  "00E9": {
+    "instanceSize": "0x1AF0"
+  },
+  "00EC": {
+    "instanceSize": "0x3C0"
+  },
+  "00ED": {
+    "instanceSize": "0xE50"
+  },
+  "00EE": {
+    "instanceSize": "0x280"
+  },
+  "00EF": {
+    "instanceSize": "0x280"
+  },
+  "00F0": {
+    "instanceSize": "0x230"
+  },
+  "00F1": {
+    "instanceSize": "0x1B0"
+  },
+  "00F4": {
+    "instanceSize": "0x1D0"
+  },
+  "00F5": {
+    "instanceSize": "0x370"
+  },
+  "00F6": {
+    "instanceSize": "0x1B0"
+  },
+  "00F7": {
+    "instanceSize": "0x1F0"
+  },
+  "00F8": {
+    "instanceSize": "0x1E0"
+  },
+  "00F9": {
+    "instanceSize": "0x230"
+  },
+  "00FA": {
+    "instanceSize": "0x1D0"
+  },
+  "00FC": {
+    "instanceSize": "0x23A0"
+  },
+  "00FD": {
+    "instanceSize": "0x1D0"
+  },
+  "00FE": {
+    "instanceSize": "0xC80"
+  },
+  "00FF": {
+    "instanceSize": "0x230"
+  },
+  "0100": {
+    "instanceSize": "0x1E0"
+  },
+  "0101": {
+    "instanceSize": "0x5D0"
+  },
+  "0102": {
+    "instanceSize": "0x1C0"
+  },
+  "0103": {
+    "instanceSize": "0x1D0"
+  },
+  "0104": {
+    "instanceSize": "0x1C0"
+  },
+  "0105": {
+    "instanceSize": "0x230"
+  },
+  "0106": {
+    "instanceSize": "0x200"
+  },
+  "0107": {
+    "instanceSize": "0x1E0"
+  },
+  "0108": {
+    "instanceSize": "0x1C0"
+  },
+  "010A": {
+    "instanceSize": "0x1D0"
+  },
+  "010B": {
+    "instanceSize": "0x1D0"
+  },
+  "010C": {
+    "instanceSize": "0x1D0"
+  },
+  "010F": {
+    "instanceSize": "0x1C0"
+  },
+  "0110": {
+    "instanceSize": "0x210"
+  },
+  "0111": {
+    "instanceSize": "0x210"
+  },
+  "0112": {
+    "instanceSize": "0x230"
+  },
+  "0113": {
+    "instanceSize": "0x1000"
+  },
+  "0114": {
+    "instanceSize": "0x310"
+  },
+  "0115": {
+    "instanceSize": "0xA50"
+  },
+  "0116": {
+    "instanceSize": "0x210"
+  },
+  "0117": {
+    "instanceSize": "0xA60"
+  },
+  "0118": {
+    "instanceSize": "0x1F0"
+  },
+  "0119": {
+    "instanceSize": "0x1C0"
+  },
+  "011A": {
+    "instanceSize": "0x8B0"
+  },
+  "011B": {
+    "instanceSize": "0x1B0"
+  },
+  "011C": {
+    "instanceSize": "0x2B0"
+  },
+  "011D": {
+    "instanceSize": "0x220"
+  },
+  "011E": {
+    "instanceSize": "0x260"
+  },
+  "011F": {
+    "instanceSize": "0x1E0"
+  },
+  "0120": {
+    "instanceSize": "0x1E0"
+  },
+  "0121": {
+    "instanceSize": "0x13E0"
+  },
+  "0122": {
+    "instanceSize": "0xD70"
+  },
+  "0123": {
+    "instanceSize": "0x1D0"
+  },
+  "0124": {
+    "instanceSize": "0xDA0"
+  },
+  "0125": {
+    "instanceSize": "0x210"
+  },
+  "0126": {
+    "instanceSize": "0x270"
+  },
+  "0127": {
+    "instanceSize": "0x200"
+  },
+  "012A": {
+    "instanceSize": "0x5D0"
+  },
+  "012B": {
+    "instanceSize": "0x1D0"
+  },
+  "012C": {
+    "instanceSize": "0x1D0"
+  },
+  "012D": {
+    "instanceSize": "0x1D0"
+  },
+  "012E": {
+    "instanceSize": "0x1C0"
+  },
+  "012F": {
+    "instanceSize": "0x270"
+  },
+  "0130": {
+    "instanceSize": "0x240"
+  },
+  "0131": {
+    "instanceSize": "0x1C0"
+  },
+  "0132": {
+    "instanceSize": "0xBF0"
+  },
+  "0133": {
+    "instanceSize": "0xC00"
+  },
+  "0135": {
+    "instanceSize": "0x790"
+  },
+  "0136": {
+    "instanceSize": "0x1D0"
+  },
+  "0137": {
+    "instanceSize": "0x1B0"
+  },
+  "0138": {
+    "instanceSize": "0xA90"
+  },
+  "0139": {
+    "instanceSize": "0x1B0"
+  },
+  "013A": {
+    "instanceSize": "0x1B0"
+  },
+  "013B": {
+    "instanceSize": "0x270"
+  },
+  "013C": {
+    "instanceSize": "0xAD0"
+  },
+  "013D": {
+    "instanceSize": "0xC20"
+  },
+  "013E": {
+    "instanceSize": "0x770"
+  },
+  "013F": {
+    "instanceSize": "0x720"
+  },
+  "0140": {
+    "instanceSize": "0x1D0"
+  },
+  "0141": {
+    "instanceSize": "0x290"
+  },
+  "0142": {
+    "instanceSize": "0x930"
+  },
+  "0143": {
+    "instanceSize": "0x800"
+  },
+  "0144": {
+    "instanceSize": "0x670"
+  },
+  "0145": {
+    "instanceSize": "0x1D0"
+  },
+  "0146": {
+    "instanceSize": "0xC50"
+  },
+  "0147": {
+    "instanceSize": "0x1C0"
+  },
+  "0148": {
+    "instanceSize": "0x1D0"
+  },
+  "0149": {
+    "instanceSize": "0x450"
+  },
+  "014A": {
+    "instanceSize": "0x850"
+  },
+  "014B": {
+    "instanceSize": "0x860"
+  },
+  "014C": {
+    "instanceSize": "0x240"
+  },
+  "014D": {
+    "instanceSize": "0x1380"
+  },
+  "014E": {
+    "instanceSize": "0x210"
+  },
+  "014F": {
+    "instanceSize": "0x200"
+  },
+  "0150": {
+    "instanceSize": "0x410"
+  },
+  "0151": {
+    "instanceSize": "0x1E0"
+  },
+  "0153": {
+    "instanceSize": "0xA20"
+  },
+  "0155": {
+    "instanceSize": "0x1D0"
+  },
+  "0156": {
+    "instanceSize": "0x3E0"
+  },
+  "0157": {
+    "instanceSize": "0x1D0"
+  },
+  "0158": {
+    "instanceSize": "0x1E0"
+  },
+  "0159": {
+    "instanceSize": "0x240"
+  },
+  "015A": {
+    "instanceSize": "0x1D0"
+  },
+  "015B": {
+    "instanceSize": "0x240"
+  },
+  "015C": {
+    "instanceSize": "0x2A0"
+  },
+  "015E": {
+    "instanceSize": "0x1B0"
+  },
+  "015F": {
+    "instanceSize": "0x210"
+  },
+  "0160": {
+    "instanceSize": "0x1C0"
+  },
+  "0162": {
+    "instanceSize": "0xAE0"
+  },
+  "0163": {
+    "instanceSize": "0xCB0"
+  },
+  "0164": {
+    "instanceSize": "0xF50"
+  },
+  "0165": {
+    "instanceSize": "0x1C0"
+  },
+  "0166": {
+    "instanceSize": "0x1D0"
+  },
+  "0167": {
+    "instanceSize": "0xA90"
+  },
+  "0168": {
+    "instanceSize": "0x1E0"
+  },
+  "0169": {
+    "instanceSize": "0x220"
+  },
+  "016A": {
+    "instanceSize": "0x710"
+  },
+  "016B": {
+    "instanceSize": "0x1F0"
+  },
+  "016C": {
+    "instanceSize": "0xB10"
+  },
+  "016D": {
+    "instanceSize": "0xC30"
+  },
+  "016E": {
+    "instanceSize": "0x1080"
+  },
+  "016F": {
+    "instanceSize": "0x17F0"
+  },
+  "0170": {
+    "instanceSize": "0x1B0"
+  },
+  "0171": {
+    "instanceSize": "0x1E0"
+  },
+  "0172": {
+    "instanceSize": "0x1E0"
+  },
+  "0173": {
+    "instanceSize": "0x1B0"
+  },
+  "0174": {
+    "instanceSize": "0x220"
+  },
+  "0175": {
+    "instanceSize": "0x9F0"
+  },
+  "0176": {
+    "instanceSize": "0x2100"
+  },
+  "0177": {
+    "instanceSize": "0x1D0"
+  },
+  "0178": {
+    "instanceSize": "0x970"
+  },
+  "0179": {
+    "instanceSize": "0x1140"
+  },
+  "017A": {
+    "instanceSize": "0x1110"
+  },
+  "017B": {
+    "instanceSize": "0x2B0"
+  },
+  "017C": {
+    "instanceSize": "0x7D0"
+  },
+  "017D": {
+    "instanceSize": "0x1B0"
+  },
+  "017E": {
+    "instanceSize": "0x1F0"
+  },
+  "017F": {
+    "instanceSize": "0x1D0"
+  },
+  "0181": {
+    "instanceSize": "0x1B0"
+  },
+  "0182": {
+    "instanceSize": "0x1500"
+  },
+  "0183": {
+    "instanceSize": "0x210"
+  },
+  "0184": {
+    "instanceSize": "0x1D0"
+  },
+  "0185": {
+    "instanceSize": "0x1D0"
+  },
+  "0186": {
+    "instanceSize": "0xB60"
+  },
+  "0187": {
+    "instanceSize": "0x1B0"
+  },
+  "0188": {
+    "instanceSize": "0xE80"
+  },
+  "0189": {
+    "instanceSize": "0x2B0"
+  },
+  "018A": {
+    "instanceSize": "0x1C0"
+  },
+  "018B": {
+    "instanceSize": "0x1D0"
+  },
+  "018C": {
+    "instanceSize": "0x840"
+  },
+  "018D": {
+    "instanceSize": "0x1D0"
+  },
+  "018E": {
+    "instanceSize": "0x230"
+  },
+  "018F": {
+    "instanceSize": "0x220"
+  },
+  "0190": {
+    "instanceSize": "0x1D0"
+  },
+  "0191": {
+    "instanceSize": "0x1D0"
+  },
+  "0192": {
+    "instanceSize": "0x640"
+  },
+  "0193": {
+    "instanceSize": "0x210"
+  },
+  "0194": {
+    "instanceSize": "0x1D0"
+  },
+  "0195": {
+    "instanceSize": "0x8A0"
+  },
+  "0196": {
+    "instanceSize": "0x200"
+  },
+  "0197": {
+    "instanceSize": "0xDF0"
+  },
+  "0198": {
+    "instanceSize": "0x1C0"
+  },
+  "0199": {
+    "instanceSize": "0x1C0"
+  },
+  "019A": {
+    "instanceSize": "0xB30"
+  },
+  "019B": {
+    "instanceSize": "0x650"
+  },
+  "019C": {
+    "instanceSize": "0x210"
+  },
+  "019D": {
+    "instanceSize": "0x1F0"
+  },
+  "019E": {
+    "instanceSize": "0x220"
+  },
+  "019F": {
+    "instanceSize": "0x220"
+  },
+  "01A0": {
+    "instanceSize": "0x220"
+  },
+  "01A1": {
+    "instanceSize": "0x260"
+  },
+  "01A2": {
+    "instanceSize": "0x900"
+  },
+  "01A3": {
+    "instanceSize": "0x900"
+  },
+  "01A4": {
+    "instanceSize": "0x980"
+  },
+  "01A5": {
+    "instanceSize": "0x1D0"
+  },
+  "01A6": {
+    "instanceSize": "0x720"
+  },
+  "01A7": {
+    "instanceSize": "0x280"
+  },
+  "01A8": {
+    "instanceSize": "0x2D0"
+  },
+  "01A9": {
+    "instanceSize": "0x1C0"
+  },
+  "01AB": {
+    "instanceSize": "0x1D0"
+  },
+  "01AC": {
+    "instanceSize": "0x870"
+  },
+  "01AD": {
+    "instanceSize": "0x640"
+  },
+  "01AE": {
+    "instanceSize": "0xF10"
+  },
+  "01AF": {
+    "instanceSize": "0xF20"
+  },
+  "01B0": {
+    "instanceSize": "0xEE0"
+  },
+  "01B1": {
+    "instanceSize": "0x320"
+  },
+  "01B2": {
+    "instanceSize": "0x1D0"
+  },
+  "01B3": {
+    "instanceSize": "0x1E0"
+  },
+  "01B4": {
+    "instanceSize": "0x1E0"
+  },
+  "01B5": {
+    "instanceSize": "0x210"
+  },
+  "01B6": {
+    "instanceSize": "0x1B0"
+  },
+  "01B7": {
+    "instanceSize": "0x1D0"
+  },
+  "01B8": {
+    "instanceSize": "0x8A0"
+  },
+  "01B9": {
+    "instanceSize": "0x290"
+  },
+  "01BA": {
+    "instanceSize": "0x320"
+  },
+  "01BB": {
+    "instanceSize": "0x1F0"
+  },
+  "01BC": {
+    "instanceSize": "0xBB0"
+  },
+  "01BD": {
+    "instanceSize": "0x1F0"
+  },
+  "01BE": {
+    "instanceSize": "0x1D0"
+  },
+  "01BF": {
+    "instanceSize": "0x970"
+  },
+  "01C0": {
+    "instanceSize": "0x620"
+  },
+  "01C1": {
+    "instanceSize": "0x9E0"
+  },
+  "01C2": {
+    "instanceSize": "0x1B0"
+  },
+  "01C3": {
+    "instanceSize": "0x1C0"
+  },
+  "01C4": {
+    "instanceSize": "0x1D0"
+  },
+  "01C5": {
+    "instanceSize": "0x490"
+  },
+  "01C6": {
+    "instanceSize": "0x7C0"
+  },
+  "01C7": {
+    "instanceSize": "0x220"
+  },
+  "01C8": {
+    "instanceSize": "0x1D0"
+  },
+  "01C9": {
+    "instanceSize": "0x2A0"
+  },
+  "01CA": {
+    "instanceSize": "0x2B0"
+  },
+  "01CB": {
+    "instanceSize": "0x1C0"
+  },
+  "01CC": {
+    "instanceSize": "0x1B0"
+  },
+  "01CD": {
+    "instanceSize": "0x1B0"
+  },
+  "01CE": {
+    "instanceSize": "0x10D0"
+  },
+  "01CF": {
+    "instanceSize": "0x1B0"
+  },
+  "01D0": {
+    "instanceSize": "0xC20"
+  },
+  "01D1": {
+    "instanceSize": "0x1E0"
+  },
+  "01D2": {
+    "instanceSize": "0x210"
+  },
+  "01D3": {
+    "instanceSize": "0xF30"
+  },
+  "01D4": {
+    "instanceSize": "0xA90"
+  },
+  "01D5": {
+    "instanceSize": "0x1C0"
+  },
+  "01D6": {
+    "instanceSize": "0x1E0"
+  },
+  "01D7": {
+    "instanceSize": "0x1D0"
+  },
+  "01D8": {
+    "instanceSize": "0x5B0"
+  },
+  "01D9": {
+    "instanceSize": "0x400"
+  },
+  "01DA": {
+    "instanceSize": "0x1C0"
+  }
+}

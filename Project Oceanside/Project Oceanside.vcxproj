@@ -157,32 +157,14 @@
   <ItemGroup>
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Heap.h" />
+    <ClInclude Include="Heap_SolveMM.h" />
+    <ClInclude Include="Heap_SolveOoT3D.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Room.h" />
     <ClInclude Include="Scene.h" />
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="mm_j_actors.json">
-      <FileType>Document</FileType>
-    </CopyFileToFolders>
-    <CopyFileToFolders Include="mm_u_actors.json">
-      <FileType>Document</FileType>
-    </CopyFileToFolders>
-    <CopyFileToFolders Include="oot_actors.json">
-      <FileType>Document</FileType>
-    </CopyFileToFolders>
-  </ItemGroup>
-  <ItemGroup>
-    <CopyFileToFolders Include="scene.json">
-      <FileType>Document</FileType>
-    </CopyFileToFolders>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="scene_2.json" />
-    <None Include="scene_3.json" />
-    <None Include="scene_4.json" />
-    <None Include="scene_5.json" />
-    <None Include="scene_6.json" />
+    <None Include="scenesOoT3D\Lost Woods.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

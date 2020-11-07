@@ -5,11 +5,70 @@
 #include "./Constants.h"
 #include "./Node.h"
 
+// Contructor
 Scene::Scene(char version, const std::string& sceneFile)
 {
 	ParseSceneJson(sceneFile);
 	ParseActorJson(version);
 	LoadScene();
+}
+
+// Constructor subroutines
+void Scene::ParseSceneJson(const std::string& filename)
+{
+	std::string sceneFile = filename;
+	std::string successMessage = " loaded";
+
+	try
+	{
+		std::ifstream f(sceneFile);
+		sceneJson = nlohmann::json::parse(f);
+		std::cout << sceneFile << successMessage << std::endl;
+	}
+	catch (nlohmann::json::parse_error& e)
+	{
+		OutputJsonExceptionInformation(e);
+	}
+}
+
+void Scene::ParseActorJson(char version)
+{
+	std::string successMessage = " loaded";
+	std::string actorFile;
+
+	switch (version)
+	{
+	case OOT:
+		actorFile = "./actors/oot_actors.json";
+		break;
+	case OOT_3D:
+		actorFile = "./actors/oot_3d_actors.json";
+		break;
+	case MM_JP:
+		actorFile = "./actors/mm_j_actors.json";
+		break;
+	case MM_US:
+		actorFile = "./actors/mm_u_actors.json";
+		break;
+	case MM_JP_GC:
+		actorFile = "./actors/mm_j_gc_actors.json";
+		break;
+	default:
+		std::cerr << "Invalid version" << std::endl;
+		break;
+	}
+
+	//read in the actor data
+	try
+	{
+		std::ifstream f(actorFile);
+		actorJson = nlohmann::json::parse(f);
+		std::cout << actorFile << successMessage << std::endl;
+	}
+	catch (nlohmann::json::parse_error& e)
+	{
+		OutputJsonExceptionInformation(e);
+	}
 }
 
 void Scene::LoadScene()
@@ -18,11 +77,11 @@ void Scene::LoadScene()
 	std::cout << "Parsing actors" << std::endl;
 
 	//load actors, create nodes, create rooms, create node caches
-	for (auto room : sceneJson["rooms"])
+	for (auto room : sceneJson["rooms"].items())
 	{
-		Room* newRoom = new Room(roomCount);
+		Room* newRoom = new Room(stoi(room.key()));
 		actorCount.clear();
-		for (auto randAllocActor : room["possibleAllocatableActors"].items())
+		for (auto randAllocActor : room.value()["possibleAllocatableActors"].items())
 		{
 			std::string actorIDString = randAllocActor.key();
 			int actorID = strtol(actorIDString.c_str(), nullptr, 16);
@@ -30,7 +89,7 @@ void Scene::LoadScene()
 			newRoom->AddRandomAllocatableActor(randAllocActor.value(), newActor);
 		}
 
-		for (auto actor : room["actorList"])
+		for (auto actor : room.value()["actorList"])
 		{
 			std::string actorIDString = actor["actorID"];
 			int actorID = strtol(actorIDString.c_str(), nullptr, 16);
@@ -61,66 +120,14 @@ void Scene::LoadScene()
 			}
 		}
 
-		std::cout << "Room " << roomCount << " completed!" << std::endl;
+		std::cout << "Room " << room.key() << " completed!" << std::endl;
 		rooms.push_back(newRoom);
-		roomCount++;
 	}
 
-	std::cout << "Parsing actors complete" << std::endl;
+	std::cout << "Parsing actors complete\n\n";
 }
 
-void Scene::ParseSceneJson(const std::string& filename)
-{
-	std::string sceneFile = filename;
-	std::string successMessage = " loaded";
-
-	try
-	{
-		std::ifstream f(sceneFile);
-		sceneJson = nlohmann::json::parse(f);
-		std::cout << sceneFile << successMessage << std::endl;
-	}
-	catch (nlohmann::json::parse_error& e)
-	{
-		OutputExceptionInformation(e);
-	}
-}
-
-void Scene::ParseActorJson(char version)
-{
-	std::string successMessage = " loaded";
-	std::string actorFile;
-
-	switch (version)
-	{
-	case MM_JP:
-		actorFile = "mm_j_actors.json";
-		break;
-	case MM_US:
-		actorFile = "mm_u_actors.json";
-		break;
-	case MM_JP_GC:
-		actorFile = "mm_j_gc_actors.json";
-		break;
-	default:
-		std::cerr << "Invalid version" << std::endl;
-		break;
-	}
-
-	//read in the actor data
-	try
-	{
-		std::ifstream f(actorFile);
-		actorJson = nlohmann::json::parse(f);
-		std::cout << actorFile << successMessage << std::endl;
-	}
-	catch (nlohmann::json::parse_error& e)
-	{
-		OutputExceptionInformation(e);
-	}
-}
-
-void Scene::OutputExceptionInformation(nlohmann::json::parse_error& error)
+void Scene::OutputJsonExceptionInformation(nlohmann::json::parse_error& error)
 {
 	// output exception information
 	std::cout << "message: " << error.what() << '\n'
@@ -128,16 +135,7 @@ void Scene::OutputExceptionInformation(nlohmann::json::parse_error& error)
 		<< "byte position of error: " << error.byte << std::endl;
 }
 
-Room* Scene::GetRoom(int roomNumber) const
-{
-    return rooms[roomNumber];
-}
-
-nlohmann::json Scene::GetActorJSON() const
-{
-	return actorJson;
-}
-
+// Main functions
 void Scene::DumpSceneInfo() const
 {
 	int roomNumber = 0;
@@ -147,14 +145,14 @@ void Scene::DumpSceneInfo() const
 		for (auto actor : room->GetAllActors())
 		{
 			std::cout << std::hex << "Actor: " << actor->GetID();
-				if (actor->IsTransitionActor())
-				{
-					std::cout << " | " << "SceneID: " << actor->GetSceneTransitionID() << std::endl;
-				}
-				else
-				{
-					std::cout << " | " << "Priority: " << actor->GetPriority() << std::endl;
-				}
+			if (actor->IsTransitionActor())
+			{
+				std::cout << " | " << "SceneID: " << actor->GetSceneTransitionID() << std::endl;
+			}
+			else
+			{
+				std::cout << " | " << "Priority: " << actor->GetPriority() << std::endl;
+			}
 		}
 		roomNumber++;
 	}
@@ -175,6 +173,17 @@ void Scene::ResetClearedActors()
 	}
 }
 
+// Getters
+Room* Scene::GetRoom(int roomNumber) const
+{
+    return rooms[roomNumber];
+}
+
+int Scene::NumberOfRooms() const
+{
+	return rooms.size();
+}
+
 std::map<int, Node*> Scene::GetTransitionActors() const
 {
 	return transitionActors;
@@ -183,4 +192,9 @@ std::map<int, Node*> Scene::GetTransitionActors() const
 int Scene::NumberOfTransitionActors() const
 {
 	return transitionActors.size();
+}
+
+nlohmann::json Scene::GetActorJSON() const
+{
+	return actorJson;
 }

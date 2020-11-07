@@ -6,78 +6,74 @@
 class Heap
 {
 public:
-	Heap(Scene* scene, int start, int linkSize);
+	// Constructor and Destructor
+	Heap(Scene* scene, char version, int start, int linkSize);
 	~Heap();
+
+	// Allocate/Deallocate Actions
 	void Allocate(Node* node);
 	Node* AllocateTemporaryActor(int actorID);
+	int AllocateRandomActor();
 	void Deallocate(int actorID, int priority);
 	void Deallocate(Node* node);
 	void DeallocateTemporaryActor(int actorID);
-	void LoadInitialRoom(int roomNumber);
-	void UnloadRoom(Room& room, int transitionActorSceneID, Node* carryActor);
-	void ChangeRoom(int newRoomNumber, int transitionActorSceneID, Node* carryActor, bool spawners);
-	void PrintHeap(char setting) const;
-	void DeleteHeap();
+	std::pair<int, int> DeallocateRandomActor();
+	void ClearTemporaryActors();
+	std::pair<int, int> ClearRandomActor();
 	Node* FindSuitableGap(Node* newNode) const;
 	void Insert(Node* newNode, Node* oldNode);
-	Node* GetHead() const;
-	Node* GetTail() const;
+
+	// Room Actions
+	void LoadInitialRoom(int roomNumber);
+	void UnloadRoom(Room& room, int transitionActorID, Node* carryActor);
+	void ChangeRoom(int newRoomNumber, int transitionActorID, Node* carryActor, bool spawners);
+
+	// Other Actions
+	void PrintHeap(char setting) const;
 	void PrintCurrentActorCount() const;
-	void ClearTemporaryActors();
 	void ResetHeap();
-	std::pair<int, int> DeallocateRandomActor();
-	int AllocateRandomActor();
-	std::pair<int, int> ClearRandomActor();
-	int GetRoomNumber() const;
-	void Solve();
-	int GetCurrentRoomNumber() const;
 	void ResetLeaks();
-	std::vector<std::pair<int, int>> GetAddressesAndPrioritiesOfType(int actorID, char type);
-	std::vector<std::pair<int, int>> GetAllAddresses(char type);
-	int GetOverlayAddress(int actorID);
+	void DeleteHeap();
+	
+	// Solve Functions
+	void SolveOoT3D_LostWoods();
+	void SolveMM();
 	void SolveObservatory();
 	void SolveGrave();
 	void SolveGraveyard();
+
+	// Getters
+	Node* GetHead() const;
+	Node* GetTail() const;
+	int GetRoomNumber() const;
+	int GetCurrentRoomNumber() const;
+	std::vector<std::pair<int, int>> GetAddressesAndPrioritiesOfType(int actorID, char type);
+	std::vector<std::pair<int, int>> GetAllAddresses(char type);
+	int GetOverlayAddress(int actorID);
 	std::vector<Node*> GetAllActorsOfID(int actorID);
 	
 private:
-	void AllocateNewRoom(Room& newRoom, Room& oldRoom, int transitionActorSceneID);
+	// Private funcs
+	void AllocateNewRoom(Room& newRoom, Room& oldRoom, int transitionActorID);
 	void DeallocateClearedActors();
 	void AllocateSpawnerOffspring();
 	void DeallocateReallocatingActors();
 
+	// Heap info
+	char version = 0;
 	Scene* scene = nullptr;
 	Node* head = nullptr;
 	Node* tail = nullptr;
+	bool initialLoad = true;
+	Room* currentRoom;
 	int currentRoomNumber = 0;
 	int initiallyLoadedRoomNumber = 0;
 	const int start_address = 0x0;
-	const int END_ADDRESS = 0x5fffff;
+	const int END_ADDRESS = 0x99499E0;
 	const int linkSize = 0x0;
 	const int LINK_ID = 0xffff;
 	const char LINK_TYPE = 'L';
 	const char OVERLAY_TYPE = 'O';
-
-	const int MAX_ALLOCATIONS_PER_STEP = 9;
-	const int LOAD_MODIFIER = 4;
-
-	const int MAX_EXPLOSIVES_PER_ROOM = 3;
-	const int MAX_ARROWS_PER_ROOM = 1;
-	const int MAX_CHUS = 0;
-	const int MAX_ISOT = 0;
-	const int MAX_BOMBS = 6;
-
-	const bool smoke = true;
-	const bool endAllocationStep = true;
-	const bool postSSRoomChange = false;
-	const bool breakRocks = false;
-	const bool fins = false;
-	const bool nut = false;
-	const bool madScrub = false;
-
-	bool initialLoad = true;
-
-	Room* currentRoom;
 
 	std::map<int, int> currentActorCount;
 	std::vector<Node*> temporaryActors;
@@ -90,13 +86,31 @@ private:
 	std::vector<Node*> reallocatingTransitionActors;
 
 	Node* carryActor = nullptr;
+	std::pair<Node*, int> heldActor;
+
+	// Constants
+	const int MAX_ALLOCATIONS_PER_STEP = 9;
+	const int LOAD_MODIFIER = 4;
+
+	const int MAX_EXPLOSIVES_PER_ROOM = 3;
+	const int MAX_ARROWS_PER_ROOM = 3;
+	const int MAX_CHUS = 40;
+	const int MAX_ISOT = 50;
+	const int MAX_BOMBS = 40;
 
 	int allocatedExplosiveCount;
+	int allocatedArrowCount;
 	int allocatedChuCount;
 	int allocatedISoTCount;
 	int allocatedBombCount;
-	int allocatedArrowCount;
 
-	std::pair<Node*, int> heldActor;
+	// Scene-specific flags
+	const bool smoke = false;
+	const bool endAllocationStep = false;
+	const bool postSSRoomChange = false;
+	const bool breakRocks = false;
+	const bool fins = false;
+	const bool nut = false;
+	const bool madScrub = false;
 };
 

@@ -2,11 +2,13 @@
 
 #include "Room.h"
 
+// Constructor
 Room::Room(int roomNumber): roomNumber(roomNumber)
 {
 
 }
 
+// Main Functions
 void Room::AddActor(Node* actor)
 {
 	allActors.push_back(actor);
@@ -44,16 +46,6 @@ void Room::AddCurrentlyLoadedActor(Node* actor)
 	currentlyLoadedActors.push_back(actor);
 }
 
-std::vector<Node*> Room::GetAllActors() const
-{
-	return allActors;
-}
-
-std::vector<Node*> Room::GetCurrentlyLoadedActors() const
-{
-	return currentlyLoadedActors;
-}
-
 void Room::RemoveCurrentlyLoadedActor(Node* node)
 {
 	currentlyLoadedActors.erase(std::remove(currentlyLoadedActors.begin(), 
@@ -63,26 +55,6 @@ void Room::RemoveCurrentlyLoadedActor(Node* node)
 void Room::ResetCurrentlyLoadedActors()
 {
 	currentlyLoadedActors.clear();
-}
-
-std::vector<Node*> Room::GetClearedActors() const
-{
-	return clearedActors;
-}
-
-std::vector<Node*> Room::GetClearableActors() const
-{
-	return clearableActors;
-}
-
-std::vector<Node*> Room::GetDeallocatableActors() const
-{
-	return deallocatableActors;
-}
-
-int Room::GetRoomNumber() const
-{
-	return roomNumber;
 }
 
 void Room::ClearActor(Node* actor)
@@ -114,14 +86,14 @@ void Room::AddRandomAllocatableActor(int timesCanAllocate, Node* actor)
 	possibleTemporaryActorsIDs.push_back(actor->GetID());
 }
 
+void Room::AddDeallocatableActor(Node* actor)
+{
+	deallocatableActors.push_back(actor);
+}
+
 void Room::AddTransitionActor(Node* actor)
 {
 	transitionActors[actor->GetSceneTransitionID()] = actor;
-}
-
-std::map<int, std::pair<int, Node*>> Room::GetPossibleTemporaryActors() const
-{
-	return possibleTemporaryActors;
 }
 
 void Room::DeallocateActor(Node* actor)
@@ -135,11 +107,6 @@ void Room::DeallocateActor(Node* actor)
 	currentlyDeallocatedActors.push_back(actor);
 	deallocatableActors.erase(std::remove(deallocatableActors.begin(), deallocatableActors.end(), actor), deallocatableActors.end());
 	RemoveCurrentlyLoadedActor(actor);
-}
-
-std::vector<int> Room::GetPossibleTemporaryActorsIDs() const
-{
-	return possibleTemporaryActorsIDs;
 }
 
 void Room::ReplenishDeallocatableActors()
@@ -206,9 +173,45 @@ void Room::DumpRoomInfo() const
 	std::cout << std::dec;
 }
 
-void Room::AddDeallocatableActor(Node* actor)
+// Getters
+int Room::GetRoomNumber() const
 {
-	deallocatableActors.push_back(actor);
+	return roomNumber;
+}
+
+std::vector<Node*> Room::GetAllActors() const
+{
+	return allActors;
+}
+
+std::vector<Node*> Room::GetCurrentlyLoadedActors() const
+{
+	return currentlyLoadedActors;
+}
+
+std::vector<Node*> Room::GetClearedActors() const
+{
+	return clearedActors;
+}
+
+std::vector<Node*> Room::GetClearableActors() const
+{
+	return clearableActors;
+}
+
+std::vector<Node*> Room::GetDeallocatableActors() const
+{
+	return deallocatableActors;
+}
+
+std::map<int, std::pair<int, Node*>> Room::GetPossibleTemporaryActors() const
+{
+	return possibleTemporaryActors;
+}
+
+std::vector<int> Room::GetPossibleTemporaryActorsIDs() const
+{
+	return possibleTemporaryActorsIDs;
 }
 
 std::map<int, Node*> Room::GetTransitionActors() const

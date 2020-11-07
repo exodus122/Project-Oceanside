@@ -1,6 +1,7 @@
 #include "Node.h"
 #include <iostream>
 
+// Constructors
 Node::Node()
 {
 
@@ -14,20 +15,19 @@ std::map<int, Node*> overlayMap = {
 Node::Node(int actorID, std::string s_actorID, nlohmann::json& actorJson, nlohmann::json& actorParameters, int priority)
 {
 	std::string actorIDString = actorJson[s_actorID]["instanceSize"];
-
+	
 	this->size = strtol(actorIDString.c_str(), nullptr, 16);
 	this->ID = actorID;
 	this->type = 'A';
 	this->priority = priority;
-
+	
+	this->description = to_string(actorParameters["description"]);
 	this->isDeallocatable = actorParameters["isDeallocatable"];
 	this->isClearable = actorParameters["isClearable"];
-	this->canStartCleared = actorParameters["canStartCleared"];
 	this->startCleared = actorParameters["startCleared"];
-	this->considerForSRM = actorParameters["considerForSRM"];
 	this->reallocateOnRoomChange = actorParameters["reallocateOnRoomChange"];
 	this->isSingleton = actorParameters["isSingleton"];
-
+	
 	//if actor is transition actor, set up relevant information
 	if (actorParameters["transition"] != -1)
 	{
@@ -79,9 +79,9 @@ Node::Node(int actorID, std::string s_actorID, nlohmann::json& actorJson, nlohma
 	else
 	{
 		this->overlay = nullptr;
-	}
-	
+	}	
 }
+
 Node::Node(int actorID, nlohmann::json& actorInfo, int priority)
 {
 	std::string actorIDString = actorInfo["instanceSize"];
@@ -124,6 +124,7 @@ Node::Node(const Node& copy)
 	this->type = copy.GetType();
 	this->overlay = copy.GetOverlay();
 
+	this->description = copy.GetDescription();
 	this->isDeallocatable = copy.IsDeallocatable();
 	this->isClearable = copy.IsClearable();
 	this->canStartCleared = copy.CanStartCleared();
@@ -161,19 +162,10 @@ Node::Node(int address, int size, Node* prev, Node* next, char type, int ID)
 
 };
 
+// Setters
 void Node::SetAddress(int address)
 {
 	this->address = address;
-}
-
-void Node::SetPrev(Node* prev)
-{
-	this->prev = prev;
-}
-
-void Node::SetNext(Node* next)
-{
-	this->next = next;
 }
 
 void Node::SetSize(int size)
@@ -181,11 +173,37 @@ void Node::SetSize(int size)
 	this->size = size;
 }
 
+void Node::SetNext(Node* next)
+{
+	this->next = next;
+}
+
+void Node::SetPrev(Node* prev)
+{
+	this->prev = prev;
+}
+
 void Node::SetID(int ID)
 {
 	this->ID = ID;
 }
 
+void Node::SetType(char type)
+{
+	this->type = type;
+}
+
+void Node::SetSpawnerOffspring(Node* node)
+{
+	spawnerOffspring.push_back(node);
+}
+
+void Node::SetCleared(bool clearStatus)
+{
+	this->cleared = clearStatus;
+}
+
+// Node Info Getters
 int Node::GetAddress() const
 {
 	return address;
@@ -206,14 +224,14 @@ Node* Node::GetPrev() const
 	return prev;
 }
 
-int Node::GetID() const
-{
-	return ID;
-}
-
 Node* Node::GetOverlay() const
 {
 	return overlay;
+}
+
+int Node::GetID() const
+{
+	return ID;
 }
 
 char Node::GetType() const
@@ -221,24 +239,15 @@ char Node::GetType() const
 	return type;
 }
 
-void Node::SetType(char type)
-{
-	this->type = type;
-}
-
 int Node::GetPriority() const
 {
 	return priority;
 }
 
-void Node::SetSpawnerOffspring(Node* node)
+// Actor Property Getters
+std::string Node::GetDescription() const
 {
-	spawnerOffspring.push_back(node);
-}
-
-std::vector<Node*> Node::GetOffspring()
-{
-	return spawnerOffspring;
+	return description;
 }
 
 bool Node::IsDeallocatable() const
@@ -271,6 +280,27 @@ bool Node::ReallocateOnRoomChange() const
 	return reallocateOnRoomChange;
 }
 
+bool Node::IsSingleton() const
+{
+	return isSingleton;
+}
+
+bool Node::IsSpawner() const
+{
+	return isSpawner;
+}
+
+bool Node::IsTransitionActor() const
+{
+	return isTransitionActor;
+}
+
+// Offspring Data Getters
+std::vector<Node*> Node::GetOffspring()
+{
+	return spawnerOffspring;
+}
+
 char Node::GetNumberOfOffspring() const
 {
 	return numberOfOffspring;
@@ -281,32 +311,13 @@ int Node::GetOffspringActorID() const
 	return offspringActorID;
 }
 
-bool Node::IsSpawner() const
+// Transition Actor Data Getters
+int Node::GetSceneTransitionID() const
 {
-	return isSpawner;
-}
-
-void Node::SetCleared(bool clearStatus)
-{
-	this->cleared = clearStatus;
-}
-
-bool Node::IsSingleton() const
-{
-	return isSingleton;
-}
-
-bool Node::IsTransitionActor() const
-{
-	return isTransitionActor;
+	return sceneTransitionID;
 }
 
 std::pair<int, int> Node::GetRoomsConnectedByTransition() const
 {
 	return roomsConnectedByTransition;
-}
-
-int Node::GetSceneTransitionID() const
-{
-	return sceneTransitionID;
 }

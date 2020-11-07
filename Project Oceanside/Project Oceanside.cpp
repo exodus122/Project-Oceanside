@@ -8,15 +8,11 @@
 
 int main()
 {
-	//JP
-	//Scene* scene = new Scene(MM_JP);
-	//Heap* heap = new Heap(scene, MM_JP1_START, MM_JP1_LINK_SIZE);
+	Scene* scene = new Scene(OOT_3D, "./scenesOoT3D/Lost Woods.json");
 
-	//US
-	Scene* scene = new Scene(MM_US, "scene.json");
-	Heap* heap = new Heap(scene, MM_US0_START, MM_US0_LINK_SIZE);
+	Heap* heap = new Heap(scene, OOT_3D, OOT3D_START, OOT3D_LINK_SIZE);
 
-	heap->Solve();
+	heap->SolveOoT3D_LostWoods();
 
 	delete(scene);
 	delete(heap);
